@@ -1,9 +1,9 @@
 const clipboardItems = document.getElementById("clipboardItems");
 
-async function updateClipboardItems() {
+ function updateClipboardItems() {
   clipboardItems.innerHTML = "";
 
- await chrome.storage.local.get("clipboardHistory", ({ clipboardHistory }) => {
+  chrome.storage.local.get("clipboardHistory", ({ clipboardHistory }) => {
     console.log("items",clipboardHistory)
     clipboardHistory.slice(-100).forEach((item, index) => {
       const li = document.createElement("li");
