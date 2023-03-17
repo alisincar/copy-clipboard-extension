@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Kopyalama Panosu Eklentisi",
+  "version": "1.0.0",
+  "description": "Seçili metni kopyalayabilmeniz ve son 10 kopyalanan öğeyi görebilmeniz için basit bir eklenti.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "permissions": ["clipboardWrite", "clipboardRead", "scripting", "storage", "activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
