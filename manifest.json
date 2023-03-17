@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Kopyalama Panosu Eklentisi",
+  "name": "Copy Clipboard Extension",
   "version": "1.0.0",
-  "description": "Seçili metni kopyalayabilmeniz ve son 10 kopyalanan öğeyi görebilmeniz için basit bir eklenti.",
+  "description": "Simple plugin so you can copy selected text and see the last 100 copied items.",
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
@@ -11,7 +11,7 @@
       "128": "icon128.png"
     }
   },
-  "permissions": ["clipboardWrite", "clipboardRead", "scripting", "storage", "activeTab"],
+  "permissions":["clipboardWrite", "clipboardRead", "storage"],
   "background": {
     "service_worker": "background.js"
   },
